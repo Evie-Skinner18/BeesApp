@@ -53,6 +53,31 @@ namespace Tests
 
             Assert.That(isDead, Is.Not.Null);
             Assert.AreEqual(isDead, true);
+            Assert.AreEqual(isReallyDead, isDead);
+        }
+
+        [Test]
+        public void CanCheckIfDroneBeeIsDead_ShouldReturnFalse()
+        {
+            _droneBee.Damage(50f);
+            var isDead = _droneBee.CheckIfDead();
+            var isReallyDead = _droneBee.IsDead;
+
+            Assert.That(isDead, Is.Not.Null);
+            Assert.AreEqual(isDead, false);
+            Assert.AreEqual(isReallyDead, isDead);
+        }
+
+        [Test]
+        public void CanCheckIfQueenBeeIsDead_ShouldReturnFalse()
+        {
+            _queenBee.Damage(50f);
+            var isDead = _queenBee.CheckIfDead();
+            var isReallyDead = _queenBee.IsDead;
+
+            Assert.That(isDead, Is.Not.Null);
+            Assert.AreEqual(isDead, false);
+            Assert.AreEqual(isReallyDead, isDead);
         }
     }
 }

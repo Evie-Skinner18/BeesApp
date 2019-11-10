@@ -14,10 +14,10 @@
         public float Damage(float percentageDamage)
         {
             var amountToDeduct = Health * (percentageDamage / 100f);
-            Health += Health - amountToDeduct;
-            return Health - amountToDeduct;
+            Health -= amountToDeduct;
+            return Health;
         }
 
-        public bool CheckIfDead() => Health < 50f;
+        public bool CheckIfDead() => IsDead = Health < 50f;
     }
 }
