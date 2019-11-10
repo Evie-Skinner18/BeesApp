@@ -6,7 +6,7 @@ namespace BeesApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello and welcome to the beehive!");
         }
     }
 }
