@@ -11,9 +11,10 @@
             Health = 100f;
         }
 
-        public float Damage(float percentageDamage)
+        public float Damage(int percentageDamage)
         {
-            var amountToDeduct = Health * (percentageDamage / 100f);
+            var floatPercentage = (float)percentageDamage;
+            var amountToDeduct = Health * (floatPercentage / 100f);
             Health -= amountToDeduct;
             return Health;
         }

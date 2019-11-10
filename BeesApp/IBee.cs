@@ -6,6 +6,6 @@
 
         float Health { get; set; }
 
-        float Damage(float percentageDamage);
+        float Damage(int percentageDamage);
     }
 }

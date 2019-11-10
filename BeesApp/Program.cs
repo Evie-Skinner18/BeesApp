@@ -9,7 +9,7 @@ namespace BeesApp
             Console.WriteLine("Hello and welcome to the beehive!");
 
             var worker = new WorkerBee();
-            var reducedHealth = worker.Damage(20f);
+            var reducedHealth = worker.Damage(20);
             var workerDeadStatus = worker.CheckIfDead();
 
             Console.WriteLine(reducedHealth);

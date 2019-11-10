@@ -20,7 +20,7 @@ namespace Tests
         [Test]
         public void CanReduceWorkerBeesHealth_ShouldReturn80()
         {
-            var currentHealth = _workerBee.Damage(20f);
+            var currentHealth = _workerBee.Damage(20);
 
             Assert.That(currentHealth, Is.Not.Null);
             Assert.AreEqual(currentHealth, 80f);
@@ -29,7 +29,7 @@ namespace Tests
         [Test]
         public void CanReduceDroneBeesHealth_ShouldReturn80()
         {
-            var currentHealth = _droneBee.Damage(20f);
+            var currentHealth = _droneBee.Damage(20);
 
             Assert.That(currentHealth, Is.Not.Null);
             Assert.AreEqual(currentHealth, 80f);
@@ -38,7 +38,7 @@ namespace Tests
         [Test]
         public void CanReduceQueenBeesHealth_ShouldReturn80()
         {
-            var currentHealth = _queenBee.Damage(20f);
+            var currentHealth = _queenBee.Damage(20);
 
             Assert.That(currentHealth, Is.Not.Null);
             Assert.AreEqual(currentHealth, 80f);
@@ -47,7 +47,7 @@ namespace Tests
         [Test]
         public void CanCheckIfWorkerBeeIsDead_ShouldReturnTrue()
         {
-            _workerBee.Damage(50f);
+            _workerBee.Damage(50);
             var isDead = _workerBee.CheckIfDead();
             var isReallyDead = _workerBee.IsDead;
 
@@ -59,7 +59,7 @@ namespace Tests
         [Test]
         public void CanCheckIfDroneBeeIsDead_ShouldReturnFalse()
         {
-            _droneBee.Damage(50f);
+            _droneBee.Damage(50);
             var isDead = _droneBee.CheckIfDead();
             var isReallyDead = _droneBee.IsDead;
 
@@ -71,7 +71,7 @@ namespace Tests
         [Test]
         public void CanCheckIfQueenBeeIsDead_ShouldReturnFalse()
         {
-            _queenBee.Damage(50f);
+            _queenBee.Damage(50);
             var isDead = _queenBee.CheckIfDead();
             var isReallyDead = _queenBee.IsDead;
 
